@@ -1,5 +1,5 @@
 FROM oraclelinux:8.3  as Builder
-LABEL "name"="ashutoshh"
+LABEL "name"="mayank"
 RUN dnf install java-1.8.0-openjdk.x86_64 java-1.8.0-openjdk-devel.x86_64  -y
 RUN dnf install maven -y
 RUN mkdir /javawebapp
@@ -10,7 +10,7 @@ RUN mvn clean package
 
 
 FROM tomcat 
-MAINTAINER ashutoshh@linux.com
+MAINTAINER mayank123modi@gmail.com
 RUN mkdir  /myapp
 COPY  --from=Builder  /javawebapp  /myapp
 RUN cp -rvf  /myapp/target/WebApp.war  /usr/local/tomcat/webapps/
