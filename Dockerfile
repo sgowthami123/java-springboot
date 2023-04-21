@@ -14,5 +14,4 @@ RUN mkdir  /myapp
 COPY  --from=Builder  /javawebapp  /myapp
 RUN cp -rvf  /myapp/target/WebApp.war  /usr/local/tomcat/webapps/
 RUN rm -rf /myapp
-RUN echo > hello
 EXPOSE 8080
