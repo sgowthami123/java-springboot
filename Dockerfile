@@ -8,7 +8,6 @@ COPY . .
 # to build project into war file 
 RUN mvn clean package
 
-
 FROM tomcat 
 MAINTAINER mayank123modi@gmail.com
 RUN mkdir  /myapp
